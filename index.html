@@ -2,56 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>菜鸟教程(runoob.com)</title>
+    <title>测试页面</title>
 
     <script type="text/javascript">
-        function WebSocketTest() {
-            if ("WebSocket" in window)
-            {
-                var url ='wss://port.live168.vip/loginregistered/login/socket/782f74a34b064d208b2a392f457e4663';
-                var ws = new WebSocket(url);
-                var i=0;
-                ws.onopen = function()
-                {
-                    // Web Socket 已连接上，使用 send() 方法发送数据
-                    // ws.send("发送数据");
-                    setInterval(function () {
-                        ws.send("发送数据");
-                        i++;
-                        console.log('---心跳发送成功--'+i+'----------------')
-                    },30000)
-
-                };
-
-                ws.onmessage = function (evt)
-                {
-                    var received_msg = evt.data;
-                  console.log('接收到数据---',received_msg)
-                };
-
-                ws.onclose = function()
-                {
-                    // 关闭 websocket
-                    console.log("连接已关闭...");
-                };
-            }
-
-            else
-            {
-                // 浏览器不支持 WebSocket
-                alert("您的浏览器不支持 WebSocket!");
-            }
-        }
-        WebSocketTest()
+    
     </script>
 
 </head>
 <body>
 
-<div id="sse">
-    <a href="javascript:WebSocketTest()">运行 WebSocket</a>
-	阿斯顿发顺丰达士大夫撒旦
-</div>
+测试页面
 
 </body>
 </html>
